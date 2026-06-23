@@ -5,15 +5,20 @@ Homebrew tap for [sessionx](https://github.com/jeromecoloma/sessionx) — a smal
 ## Install
 
 ```sh
-brew install jeromecoloma/sessionx/sessionx
-```
-
-Or tap first, then install:
-
-```sh
 brew tap jeromecoloma/sessionx
+brew trust jeromecoloma/sessionx   # Homebrew 6.0+ requires trusting non-official taps
 brew install sessionx
 ```
+
+### Trusting the tap
+
+On Homebrew 6.0+, `HOMEBREW_REQUIRE_TAP_TRUST` defaults to `true`, so non-official taps must be trusted before brew will load their formulae. Skip the `brew trust` step and you'll hit:
+
+```
+Warning: Skipping sessionx: tap formula is not trusted
+```
+
+`brew trust jeromecoloma/sessionx` is a one-time action per machine — it records the tap in `~/.homebrew/trust.json` (or `$XDG_CONFIG_HOME/homebrew/trust.json`). Reverse it with `brew untrust jeromecoloma/sessionx`. Only official taps (`homebrew/core`, `homebrew/cask`) are trusted by default.
 
 ## Upgrade
 
