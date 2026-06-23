@@ -1,32 +1,32 @@
 class Sessionx < Formula
-  desc "Simple tmux session manager with optional git-worktree mode and per-project status bars"
+  desc "Tmux session manager with git-worktree mode and per-project status bars"
   homepage "https://github.com/jeromecoloma/sessionx"
-  version "0.1.1"
+  version "0.2.1"
   license "MIT"
+
+  depends_on "tmux"
 
   on_macos do
     on_arm do
-      url "https://github.com/jeromecoloma/sessionx/releases/download/v0.1.1/sessionx-v0.1.1-aarch64-apple-darwin.tar.gz"
-      sha256 "b073b57229911a667cd85c21b22dbe82b017ede322136fdf66af8d6be8e89a18"
+      url "https://github.com/jeromecoloma/sessionx/releases/download/v0.2.1/sessionx-v0.2.1-aarch64-apple-darwin.tar.gz"
+      sha256 "5d3414ef35b43089bd2e45960d3fbd8a534116da12a8b6ee327801aa5802cf69"
     end
     on_intel do
-      url "https://github.com/jeromecoloma/sessionx/releases/download/v0.1.1/sessionx-v0.1.1-x86_64-apple-darwin.tar.gz"
-      sha256 "db7abca1a78d8550a90256ed08cb2632208bac450af09afde05bbaf3b9846c15"
+      url "https://github.com/jeromecoloma/sessionx/releases/download/v0.2.1/sessionx-v0.2.1-x86_64-apple-darwin.tar.gz"
+      sha256 "ef5084728df93ee89b1b2c829a34e680b79c5bb3120bfe21faf6110cd1000aae"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jeromecoloma/sessionx/releases/download/v0.1.1/sessionx-v0.1.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "1387648de90067bf9e8f34bbfcfaa84758b5852b82c7e5982573396ce4c6f18b"
+      url "https://github.com/jeromecoloma/sessionx/releases/download/v0.2.1/sessionx-v0.2.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "63bc8be51df8e17b3722cc3f5f1a848186adcecc8df35277b627786c8dbb1445"
     end
     on_intel do
-      url "https://github.com/jeromecoloma/sessionx/releases/download/v0.1.1/sessionx-v0.1.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "42b4ce8acf8cf90d8835d832742dfd2fdc71551312ec90c3deffb30995ef3aae"
+      url "https://github.com/jeromecoloma/sessionx/releases/download/v0.2.1/sessionx-v0.2.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ddfc321e7e8c9125ae5f6fa38bdc0cda686ddf8b02dd157afa5aeacb1cf4b883"
     end
   end
-
-  depends_on "tmux"
 
   def install
     bin.install "sessionx"
