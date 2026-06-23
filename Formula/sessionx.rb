@@ -1,7 +1,6 @@
 class Sessionx < Formula
   desc "Tmux session manager with git-worktree mode and per-project status bars"
   homepage "https://github.com/jeromecoloma/sessionx"
-  version "0.2.1"
   license "MIT"
 
   depends_on "tmux"
